@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
   </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+ </ion-header>
+ <ion-list>
+  <ion-item>
+    <ion-label position="stacked" color="primary">Username</ion-label>
+    <ion-input [(ngModel)]="myStatus" name="username" type="text" required>
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked" color="primary">Password</ion-label>
+    <ion-input [(ngModel)]="myPassword" name="password" type="password" required>
+    </ion-input>
+  </ion-item>
+</ion-list>
+ <ion-content padding>
+  <ion-button [disabled]="!buttonEnabled" expand="block" routerLink="/premier" routerDirection="root">
+    Login
+  </ion-button>
+  <ion-button (click)="onLogin()" expand="block">
+    saved details from previous logins
+  </ion-button>
+  <ion-button (click)="setLoginData()" expand="block">
+    Authorise
+  </ion-button>
+ </ion-content>

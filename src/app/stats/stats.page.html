@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/premier"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Top Scorers</ion-title>
+  </ion-toolbar>
+ </ion-header>
+ 
+ <ion-content padding>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>Position</ion-col>
+        <ion-col>Goalscorer</ion-col>
+        <ion-col>Team</ion-col>
+        <ion-col>Goals</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list *ngFor="let f of goalScorers">
+          <ion-grid>
+            <ion-row>
+              <ion-col>{{f.key}}</ion-col>
+              <ion-col>{{f.name}}</ion-col>
+              <ion-col>{{f.team}}</ion-col>
+              <ion-col>{{f.code}}</ion-col>
+            </ion-row>
+            </ion-grid>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>Position</ion-col>
+        <ion-col>Assister</ion-col>
+        <ion-col>Team</ion-col>
+        <ion-col>Assists</ion-col>
+      </ion-row>
+    </ion-grid>
+<ion-list *ngFor="let g of assistsData">
+  <ion-grid>
+    <ion-row>
+      <ion-col>{{g.key}}</ion-col>
+      <ion-col>{{g.name}}</ion-col>
+      <ion-col>{{g.team}}</ion-col>
+      <ion-col>{{g.code}}</ion-col>
+    </ion-row>
+    </ion-grid>
+</ion-list>
+  </ion-toolbar>
+ </ion-content>

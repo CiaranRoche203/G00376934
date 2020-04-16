@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/premier"></ion-back-button>
+    </ion-buttons>
+    <ion-title>League Table</ion-title>
+  </ion-toolbar>
+ </ion-header>
+ 
+
+<ion-content>
+<ion-header>
+  <ion-toolbar>
+  <ion-title>Football 2019/20</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-header>
+
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="bold" colour="dark">Position</ion-col>
+        <ion-col  class="bold" colour="dark" size="6">Team</ion-col>
+        <ion-col  class="bold" colour="dark">Points</ion-col>
+        <ion-col  class="bold" colour="dark">Played</ion-col>
+        <ion-col  class="bold" colour="dark"> Won</ion-col>
+        <ion-col  class="bold" colour="dark">Lost</ion-col>
+        <ion-col  class="bold" colour="dark">Drawn</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list *ngFor="let f of premierData">
+          <ion-grid>
+            <ion-row>
+              <ion-col class="bold" colour="dark">{{f.pos}}</ion-col>
+              <ion-col class="bold" colour="dark" size="6">{{f.name}}</ion-col>
+              <ion-col class="bold" colour="dark">{{f.code}}</ion-col>
+              <ion-col class="bold" colour="dark">{{f.played}}</ion-col>
+              <ion-col class="bold" colour="dark">{{f.won}}</ion-col>
+              <ion-col class="bold" colour="dark">{{f.lost}}</ion-col>
+              <ion-col class="bold" colour="dark">{{f.drawn}}</ion-col>
+
+            </ion-row>
+            </ion-grid>
+    </ion-list>
+  </ion-toolbar>
+
+</ion-header>
+</ion-content>

@@ -1,0 +1,121 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Welcome, please select an option</ion-title>
+  </ion-toolbar>
+ </ion-header>
+ 
+ <ion-content padding >
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png"height="200" width="500"(dblclick)=show()>
+  <br>
+      <ion-button shape="round" fill="outline" (click)=show()>Premier League History</ion-button>
+  <br>
+  <ion-grid [hidden]="hidden">
+    <ion-row>
+      <ion-col>
+        <ion-text class="bold"  >
+          Founded: 
+        </ion-text>
+        
+      </ion-col>
+      <ion-col>
+        <ion-text class="bold"  >20 February 1992; 28 years ago 
+        </ion-text>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text class="bold"  >Country
+        </ion-text> </ion-col>
+      <ion-col>  <ion-text class="bold"  >England </ion-text> </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text class="bold"  >
+        Confederation
+       </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text class="bold"  >
+        UEFA
+       </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text class="bold"  >
+        Number of teams 
+      </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text class="bold"  >20</ion-text>
+         
+        </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col> 
+        <ion-text class="bold"  > Relegation </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text class="bold"  >EFL Championship</ion-text> </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col> 
+        <ion-text class="bold"  >Domestic cup(s)</ion-text></ion-col>
+      <ion-col> 
+        <ion-text class="bold"  >FA Cup, FA Community Shield, League cup(s)	EFL Cup</ion-text></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text class="bold"  >International cup(s)</ion-text> </ion-col>
+      <ion-col> 
+        <ion-text class="bold"  >UEFA Champions League, UEFA Europa League</ion-text></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text class="bold"  >Current champions</ion-text> </ion-col>
+      <ion-col><ion-text class="bold"  >Manchester City (4th title)(2018–19)</ion-text> </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col><ion-text class="bold"  >Most championships</ion-text> </ion-col>
+      <ion-col><ion-text class="bold"  > Manchester United (13 titles)</ion-text></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col> <ion-text class="bold"  >Most appearances</ion-text></ion-col>
+      <ion-col><ion-text class="bold"  >Gareth Barry (653)</ion-text> </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-text class="bold"  >Top goalscorer</ion-text> </ion-col>
+      <ion-col><ion-text class="bold"  >Alan Shearer (260)</ion-text> </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" size="large" shape="round" routerLink="/stats" routerDirection="forward">
+          Stats
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" size="large" shape="round" routerLink="/table" routerDirection="forward">
+          Premier League Table
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" size="large" shape="round" routerLink="/settings" routerDirection="forward">
+          Settings
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" size="large" shape="round" routerLink="/" routerDirection="root">
+          Logout
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+ </ion-content>

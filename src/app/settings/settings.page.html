@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>serieA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item>
+  <ion-range min ="0" max="100" (ionChange)="SetBrightness()" [(ngModel)]="rangeval" color="danger" pin="true">
+  </ion-range>
+</ion-item>
+<ion-button expand="block" routerLink="/" routerDirection="root">
+  Logout
+</ion-button>
+</ion-content>
