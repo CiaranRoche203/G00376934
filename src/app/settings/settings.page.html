@@ -1,6 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>serieA</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/premier"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="bold" >Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +12,20 @@
   <ion-range min ="0" max="100" (ionChange)="SetBrightness()" [(ngModel)]="rangeval" color="danger" pin="true">
   </ion-range>
 </ion-item>
-<ion-button expand="block" routerLink="/" routerDirection="root">
+<br>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" size="large" shape="round" (click)="openBlank()">Premier League Official Website</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" size="large" shape="round" (click)="openBlank1()">Fantasy Football</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<br>
+<ion-button expand="block" size="large" shape="round" routerLink="/" routerDirection="root">
   Logout
 </ion-button>
 </ion-content>
