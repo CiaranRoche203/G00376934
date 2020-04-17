@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { Platform, NavController } from '@ionic/angular';
 import { Brightness } from '@ionic-native/brightness/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-
+import { Storage } from'@ionic/storage';
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.page.html',
@@ -11,9 +11,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 export class SettingsPage implements OnInit {
 
   rangeval:number=100;
-
+  myStatus: string;
   constructor(private brightness: Brightness, 
-    private platform:Platform, private iab:InAppBrowser) {
+    private platform:Platform, private iab:InAppBrowser, private storage: Storage, private navCtrl: NavController,) {
     this.platform.ready().then(()=>{
       this.setBrightness();
     })
@@ -32,10 +32,15 @@ export class SettingsPage implements OnInit {
     this.iab.create('https://fantasy.premierleague.com/', '_blank');
   }
   
-  ngOnInit() {
-   
-   // let brightnessValue = 0.8;
-//this.brightness.setBrightness(brightnessValue);
-  }
+  
+  ngOnInit() {this.storage.get("myStatus").then((data) => {
+    this.myStatus = data;})
+    .catch();}
+    saveStatus() 
+    {console.log(this.myStatus);
+      this.storage.set("myStatus", this.myStatus).then(() => {
+        this.navCtrl.navigateBack('/premier');})
+        .catch();
+      }
 
 }

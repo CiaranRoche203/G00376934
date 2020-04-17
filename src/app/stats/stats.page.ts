@@ -23,5 +23,19 @@ export class StatsPage implements OnInit {
   });
  
 }
-   //this.myId = this.activatedRoute.snapshot.paramMap.get('myid');
+title = 'app';
+numberOfTimes = 0;
+hidden = true;
+  count(){
+    this.numberOfTimes++;
+  }
+show(){
+  if(this.hidden==false){
+    this.hidden=true;
+  }else{
+    this.hidden=false;
+  }
 }
+}
+
+   //this.myId = this.activatedRoute.snapshot.paramMap.get('myid');

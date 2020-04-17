@@ -23,6 +23,18 @@
     </ion-col>
   </ion-row>
 </ion-grid>
+<br>
+<ion-title>Current favourite team is {{myStatus}}</ion-title>
+<ion-list><ion-radio-group [(ngModel)]="myStatus"><ion-item>
+  <ion-label>Chelsea</ion-label><ion-radio value="Chelsea">
+
+  </ion-radio>
+</ion-item>
+<ion-item><ion-label>Man Utd</ion-label>
+  <ion-radio value="Man Utd" ></ion-radio></ion-item>
+  <ion-item><ion-label>Liverpool</ion-label><ion-radio value="Liverpool" ></ion-radio>
+  </ion-item></ion-radio-group>
+</ion-list><ion-button (click)="saveStatus()">Save</ion-button>
 
 <br>
 <ion-button expand="block" size="large" shape="round" routerLink="/" routerDirection="root">

@@ -6,42 +6,71 @@
     <ion-title>Top Scorers</ion-title>
   </ion-toolbar>
  </ion-header>
- 
+
  <ion-content padding>
   <ion-toolbar>
     <ion-grid>
       <ion-row>
-        <ion-col>Position</ion-col>
-        <ion-col>Goalscorer</ion-col>
-        <ion-col>Team</ion-col>
-        <ion-col>Goals</ion-col>
+        <ion-col><img src="https://i.eurosport.com/2019/11/09/2713731-56096650-2560-1440.jpg?w=750"height="350" width="600"(dblclick)=show()></ion-col>
+    <ion-col>
+      <ion-button shape="round" fill="outline" (click)=show()>Info on top scorer</ion-button>
+      <ion-text [hidden]="hidden"  >
+        <br>
+        Jamie Vardy is a player for Leicester City fooball club and is the top scorer in the league.
+
+      </ion-text>
+    </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="bold" colour="dark">Position</ion-col>
+        <ion-col class="bold" colour="dark">Goalscorer</ion-col>
+        <ion-col class="bold" colour="dark">Team</ion-col>
+        <ion-col class="bold" colour="dark">Goals</ion-col>
       </ion-row>
     </ion-grid>
     <ion-list *ngFor="let f of goalScorers">
           <ion-grid>
             <ion-row>
-              <ion-col>{{f.key}}</ion-col>
-              <ion-col>{{f.name}}</ion-col>
-              <ion-col>{{f.team}}</ion-col>
-              <ion-col>{{f.code}}</ion-col>
+              <ion-col class="bold" colour="dark">{{f.key}}</ion-col>
+              <ion-col class="bold" colour="dark">{{f.name}}</ion-col>
+              <ion-col class="bold" colour="dark">{{f.team}}</ion-col>
+              <ion-col class="bold" colour="dark">{{f.code}}</ion-col>
             </ion-row>
             </ion-grid>
     </ion-list>
+    <br>
+    <br>
     <ion-grid>
       <ion-row>
-        <ion-col>Position</ion-col>
-        <ion-col>Assister</ion-col>
-        <ion-col>Team</ion-col>
-        <ion-col>Assists</ion-col>
+        <ion-col><img src="https://i.eurosport.com/2020/02/27/2785168-57487370-2560-1440.jpg?w=750"height="350" width="600"(dblclick)=show()></ion-col>
+    <ion-col>
+      <ion-button shape="round" fill="outline" (click)=show()>Info on top scorer</ion-button>
+      <ion-text [hidden]="hidden"  >
+        <br>
+        Kevin De Bruyne plays for Man city and continues to show his class year on year.
+
+      </ion-text>
+    </ion-col>
       </ion-row>
     </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="bold" colour="dark">Position</ion-col>
+        <ion-col class="bold" colour="dark">Assister</ion-col>
+        <ion-col class="bold" colour="dark">Team</ion-col>
+        <ion-col class="bold" colour="dark">Assists</ion-col>
+      </ion-row>
+    </ion-grid>
+    
 <ion-list *ngFor="let g of assistsData">
   <ion-grid>
     <ion-row>
-      <ion-col>{{g.key}}</ion-col>
-      <ion-col>{{g.name}}</ion-col>
-      <ion-col>{{g.team}}</ion-col>
-      <ion-col>{{g.code}}</ion-col>
+      <ion-col class="bold" colour="dark">{{g.key}}</ion-col>
+      <ion-col class="bold" colour="dark">{{g.name}}</ion-col>
+      <ion-col class="bold" colour="dark">{{g.team}}</ion-col>
+      <ion-col class="bold" colour="dark">{{g.code}}</ion-col>
     </ion-row>
     </ion-grid>
 </ion-list>
