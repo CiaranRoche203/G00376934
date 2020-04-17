@@ -4,9 +4,10 @@
     <ion-title>Welcome, please select an option</ion-title>
   </ion-toolbar>
  </ion-header>
- 
+ <!--image of the pl logo-->
  <ion-content padding >
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png"height="200" width="500"(dblclick)=show()>
+  <!--button when clicked displays info. Example of data binding-->
   <br>
       <ion-button shape="round" fill="outline" (click)=show()>Premier League History</ion-button>
   <br>
@@ -88,7 +89,7 @@
       <ion-col><ion-text class="bold"  >Top goalscorer</ion-text> </ion-col>
       <ion-col><ion-text class="bold"  >Alan Shearer (260)</ion-text> </ion-col>
     </ion-row>
-
+<!--4 buttons, each brings you to a new page. Navigation example-->
   </ion-grid>
   <br>
   <ion-grid>
@@ -119,9 +120,10 @@
   </ion-grid>
   <ion-header>
     <ion-toolbar>
+      <!--stored info of the favourite team. Sometimes needs to be refreshed-->
       <ion-title>Update Status Page</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-title>Your latest status: {{myStatus}}</ion-title>
-  <ion-button routerLink="/settings">Update Status</ion-button>
+  <ion-title>Your Favourite team: {{myStatus}}</ion-title>
+  <ion-button routerLink="/settings">Update Favourite team</ion-button>
  </ion-content>

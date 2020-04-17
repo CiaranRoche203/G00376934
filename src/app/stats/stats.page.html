@@ -6,22 +6,29 @@
     <ion-title>Top Scorers</ion-title>
   </ion-toolbar>
  </ion-header>
-
+<!--below, is an image of the top scorer in the league-->
+<!--i created a button so the user can click to find more info on the player-->
+<!--this was an example of data binding-->
  <ion-content padding>
   <ion-toolbar>
     <ion-grid>
       <ion-row>
         <ion-col><img src="https://i.eurosport.com/2019/11/09/2713731-56096650-2560-1440.jpg?w=750"height="350" width="600"(dblclick)=show()></ion-col>
     <ion-col>
-      <ion-button shape="round" fill="outline" (click)=show()>Info on top scorer</ion-button>
-      <ion-text [hidden]="hidden"  >
+      <ion-button shape="round" class="bold" fill="outline" (click)=show()>Info on top scorer</ion-button>
+      <ion-text class="bold" [hidden]="hidden"  >
         <br>
         Jamie Vardy is a player for Leicester City fooball club and is the top scorer in the league.
-
+        In May 2012, Vardy signed for Leicester City in the Championship for a non-League record transfer fee of 
+        £1 million and helped the team win the Championship in 2014. 
+        In the 2015–16 Premier League season, he scored in eleven consecutive Premier League matches, 
+        breaking Ruud van Nistelrooy's record, and was voted the Premier League Player of the Season and 
+        FWA Footballer of the Year as outsiders Leicester won the title
       </ion-text>
     </ion-col>
       </ion-row>
     </ion-grid>
+    <!--another table to show the json data. This time for goalscorers and further on the assists-->
     <ion-grid>
       <ion-row>
         <ion-col class="bold" colour="dark">Position</ion-col>
@@ -30,6 +37,7 @@
         <ion-col class="bold" colour="dark">Goals</ion-col>
       </ion-row>
     </ion-grid>
+    <!--ngfor lets us access the data from the ts page-->
     <ion-list *ngFor="let f of goalScorers">
           <ion-grid>
             <ion-row>
@@ -42,14 +50,19 @@
     </ion-list>
     <br>
     <br>
+    <!--same concept as above with the goalscorer but with the assister this time-->
     <ion-grid>
       <ion-row>
         <ion-col><img src="https://i.eurosport.com/2020/02/27/2785168-57487370-2560-1440.jpg?w=750"height="350" width="600"(dblclick)=show()></ion-col>
     <ion-col>
-      <ion-button shape="round" fill="outline" (click)=show()>Info on top scorer</ion-button>
-      <ion-text [hidden]="hidden"  >
+      <ion-button shape="round" class="bold" fill="outline" (click)=show()>Info on top scorer</ion-button>
+      <ion-text class="bold" [hidden]="hidden"  >
         <br>
-        Kevin De Bruyne plays for Man city and continues to show his class year on year.
+        He signed with Wolfsburg for £18 million in 2014, and in 2015 he was named Footballer of the Year in Germany. Later that year, he joined Manchester City for a club record £54 million. 
+        In five seasons with City, De Bruyne has appeared in over 200 matches and won two Premier League titles, 
+        four League Cups and one FA Cup. He had a significant role in City's quest to become the first Premier League
+         team to attain 100 points in a single season in the 2017–18. Additionally, 
+        De Bruyne has been named Manchester City's Player of the Year, twice, in 2016 and 2018.
 
       </ion-text>
     </ion-col>

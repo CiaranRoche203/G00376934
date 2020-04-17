@@ -6,8 +6,9 @@
     <ion-title>League Table</ion-title>
   </ion-toolbar>
  </ion-header>
+ <!--above i have created a header for the page. there is also a back putton which brings the user to the previous page-->
  
-
+ <!--here is a title that tells us this is the premier league table-->
 <ion-content>
 <ion-header>
   <ion-toolbar>
@@ -15,7 +16,9 @@
 </ion-toolbar>
 </ion-header>
 <ion-header>
-
+  <!--i then created a grid in order to input the json data-->
+  <!--i have set the text to bold using the css class and changed the colour to dark-->
+  <!--each row shows the headers of the columns, then every teams details-->
   <ion-toolbar>
     <ion-grid>
       <ion-row>
@@ -28,6 +31,7 @@
         <ion-col  class="bold" colour="dark">Drawn</ion-col>
       </ion-row>
     </ion-grid>
+    <!--here we are displaying the json data. this is very useful as it limits the amount of code to be written-->
     <ion-list *ngFor="let f of premierData">
           <ion-grid>
             <ion-row>
@@ -43,6 +47,8 @@
             </ion-grid>
     </ion-list>
   </ion-toolbar>
+  <!--the following is quite a lot to look at, but it is the same function regurgitated essentially-->
+  <!--this is displaying an image at the bottom of the table. each representing a team in the league-->
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png"height="50" width="50"(dblclick)=show()>
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png"height="50" width="50"(dblclick)=show()>
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Leicester_City_crest.svg/1200px-Leicester_City_crest.svg.png"height="50" width="50"(dblclick)=show()>
@@ -66,16 +72,6 @@
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/170px-AFC_Bournemouth_%282013%29.svg.png"height="50" width="50"(dblclick)=show()>
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/1200px-Aston_Villa_FC_crest_%282016%29.svg.png"height="50" width="50"(dblclick)=show()>
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Norwich_City.svg/1200px-Norwich_City.svg.png"height="50" width="50"(dblclick)=show()>
-
-
-
-
-
-
-
-
-
-
 
 </ion-header>
 </ion-content>

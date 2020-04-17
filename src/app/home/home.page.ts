@@ -14,6 +14,7 @@ export class HomePage {
  buttonEnabled: boolean=false;
  constructor(private storage: Storage) {}
 
+ //example of storage. stores the users name and password
  onLogin() {
    //console.log('user name:', this.login.username );
    //console.log('user password', this.login.password );
@@ -27,10 +28,9 @@ export class HomePage {
    .catch();
  
  }
-
+//this sets the data. the user must enter these details in order to obtain access
+//once the details are correct the button is enabled
  setLoginData() {
-   //this.login.username = 'edupala.com';
-   //this.login.password = '12345';
    console.log(this.myStatus);
    console.log(this.myPassword);
    this.storage.set("myStatus", this.myStatus).then(

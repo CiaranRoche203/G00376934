@@ -8,11 +8,14 @@
 </ion-header>
 
 <ion-content>
+  <!--the bar i mentioned in the ts page. allows user to change brightness on a device not on ionic serve unfortunately-->
 <ion-item>
   <ion-range min ="0" max="100" (ionChange)="SetBrightness()" [(ngModel)]="rangeval" color="danger" pin="true">
   </ion-range>
 </ion-item>
 <br>
+<!--the following is the in app browser demonstration-->
+<!--this and brightness were the plugins i decided were the most suitable for the app -->
 <ion-grid>
   <ion-row>
     <ion-col>
@@ -24,6 +27,7 @@
   </ion-row>
 </ion-grid>
 <br>
+<!--the current team is saved here. This is an example of storage coming into effect-->
 <ion-title>Current favourite team is {{myStatus}}</ion-title>
 <ion-list><ion-radio-group [(ngModel)]="myStatus"><ion-item>
   <ion-label>Chelsea</ion-label><ion-radio value="Chelsea">
@@ -37,6 +41,7 @@
 </ion-list><ion-button (click)="saveStatus()">Save</ion-button>
 
 <br>
+<!--logout button which brings the user to the home page-->
 <ion-button expand="block" size="large" shape="round" routerLink="/" routerDirection="root">
   Logout
 </ion-button>

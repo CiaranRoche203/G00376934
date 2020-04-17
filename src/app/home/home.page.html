@@ -4,6 +4,7 @@
   </ion-toolbar>
  </ion-header>
  <ion-list>
+   <!--login - storage. the user must have the correct name and password to login-->
   <ion-item>
     <ion-label position="stacked" color="primary">Username</ion-label>
     <ion-input [(ngModel)]="myStatus" name="username" type="text" required>
@@ -16,12 +17,15 @@
   </ion-item>
 </ion-list>
  <ion-content padding>
+   <!--button is disabled until the program knows the user has the right details-->
   <ion-button [disabled]="!buttonEnabled" expand="block" routerLink="/premier" routerDirection="root">
     Login
   </ion-button>
+  <!--gives the user of entering the saved details from the last use-->
   <ion-button (click)="onLogin()" expand="block">
     saved details from previous logins
   </ion-button>
+  <!--must be clicked to attempt to login. checks to see that details match-->
   <ion-button (click)="setLoginData()" expand="block">
     Authorise
   </ion-button>

@@ -11,7 +11,7 @@ export class StatsPage implements OnInit {
   assistsData:any =[];
   //myId = null;
   constructor(private service: ServicesService) { }
-
+//accessing the json data from the third party for both goals and assists. 2 separate functions and json files
  ngOnInit(): void {
    this.service.getGoals().subscribe((data)=>{
      this.goalScorers = data.clubs;
@@ -23,6 +23,9 @@ export class StatsPage implements OnInit {
   });
  
 }
+//the following is the click on info button. 
+//when a user clicks it shows the info, when they click again it is hidden
+//this was done using a boolean and show function
 title = 'app';
 numberOfTimes = 0;
 hidden = true;
